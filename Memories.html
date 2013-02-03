@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Memories</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/photoswipe.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+		<script type="text/javascript" src="js/klass.min.js"></script>
+		<script type="text/javascript" src="js/code.photoswipe.jquery-3.0.4.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+        <script type="text/javascript">
+            var datefield = document.createElement("input")
+            datefield.setAttribute("type", "date")
+            if (datefield.type != "date") { //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+                document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+                document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+                document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
+            }
+         </script>
+        <script type="text/javascript">
+            if (datefield.type != "date") { //if browser doesn't support input type="date", initialize date picker widget:
+            jQuery(function ($) { //on document.ready
+                $('#Date1').datepicker();
+                $('#Date2').datepicker();
+            })
+        }
+        </script>
+<!--        <script type="text/javascript">
+            var nsIFilePicker = Components.interfaces.nsIFilePicker;
+            var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+                        fp.init(window, "Select a Folder", nsIFilePicker.modeGetFolder);
+         </script>-->
+	</head>
+	<body>
+		<div data-role="page" data-add-back-btn="true">
+			<div data-role="header" id="header">
+				<h1>Old Memories</h1>
+			</div><!-- /header -->
+			<div data-role="content">
+				<div class="ui-body ui-body-b ui-corner-all">
+					<div class="contact-thankyou" style="display: none;">
+						Thank you.  Now you can revive old memories.
+					</div>
+					<div class="contact-form">
+						<p class="mandatory">
+							* Mandatory Field
+						</p>
+                        <div data-role="collapsible-set">
+                
+                    <div data-role="collapsible" data-theme="b" data-content-theme="b">
+                    <h3>Moment Details</h3>
+                    <div data-role="fieldcontain" class="text-field">
+							<label for="MemoryId">Memory Id*:</label><input type="text" name="MemoryId" value="" placeholder="" class="required" id="Text1" />
+						</div>
+                    </div>
+                    
+                    <div data-role="collapsible" data-theme="c" data-content-theme="c">
+                    <h3>your Details</h3>
+                    <div data-role="fieldcontain" class="text-field">
+							<label for="firstname">First Name*:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" name="firstname" value="" placeholder="" class="required" id="Text2" />
+						</div>
+                    <div data-role="fieldcontain" class="text-field">
+							<label for="lastname">Last Name*:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" name="lastname" value="" placeholder="" class="required" id="Text5" />
+						</div>
+                    </div>
+                    
+                    <div data-role="collapsible" data-theme="b" data-content-theme="b">
+                    <h3>Camera Details</h3>
+                    <div data-role="fieldcontain">
+							<label for="imagePath">Image Path*:</label>&nbsp;&nbsp;
+                            <input type="file" multiple="" name="imagePath" value="" placeholder="" class="required" id="Text3"/>
+                           <!--<a href="javascript:;" onclick="fp.show()" data-role="button" data-inline="true" data-theme="a" id="browse">Browse</a>-->
+						</div> 
+                    </div> 
+                </div>
+						<div class="Share">
+							<a href="javascript:;" data-role="button" data-theme="a" data-iconpos="right" id="Share">Share</a>
+						</div>
+					</div><!-- //.contact-form -->
+				</div>
+				<p class="copyright">Copyright &copy; ImageSync. Designed by <a href="https://github.com/SanchitAggarwal/ImageSync.git" class="ui-link">AimLess</a></p>
+			</div><!-- /content -->
+			  <div data-role="footer" data-theme="a">
+            <div class="ui-bar">
+             <a href="" data-role="button" data-icon="arrow-u" data-theme="a" style="float:right;" class="returnTopAction">Return top</a>             
+           </div>
+          </div>
+          <!-- /Footer --> 
+
+		</div><!-- /page -->
+	</body>
+</html>

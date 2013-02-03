@@ -1,0 +1,32 @@
+{
+  "version": "0.1",
+  "name": "ImageSync",
+  "description": "Share Image On a Click",
+  "launch_path": "/",
+  "icons": {
+    "16": "/img/icons/ImageSync-48.png",
+    "48": "/img/icons/ImageSync-64.png",
+    "128": "/img/icons/ImageSync-128.png"
+  },
+  "developer": {
+    "name": "AimLess",
+    "url": "https://github.com/SanchitAggarwal/ImageSync.git"
+  },
+  "installs_allowed_from": ["*"],
+  "appcache_path": "/cache.manifest",
+  "locales": {
+    "es": {
+      "description": "Share Image On a Click",
+      "developer": {
+        "url": "https://github.com/SanchitAggarwal/ImageSync.git"
+      }
+    },
+    "it": {
+      "description": "Share Image On a Click",
+      "developer": {
+        "url": "https://github.com/SanchitAggarwal/ImageSync.git"
+      }
+    }
+  },
+  "default_locale": "en"
+}
